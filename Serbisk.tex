@@ -1,0 +1,292 @@
+\documentclass[12pt,
+               a4paper,
+               article,
+               oneside,
+               english,oldfontcommands]{memoir}
+\usepackage{student}
+
+% Metadata
+\date{\today}
+\setmodule{Colloquial Serbian}
+\setterm{Vår, 2023}
+
+%-------------------------------%
+% Other details
+% TODO: Fill these
+%-------------------------------%
+\title{Serbian Practice Notes}
+\setmembername{Jonas Semprini Næss}  % Fill group member names
+
+%-------------------------------%
+% Add / Delete commands and packages
+% TODO: Add / Delete here as you need
+%-------------------------------%
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{titling}% the wheel somebody else kindly made for us earlier
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{epigraph} 
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage[scaled]{beramono}
+\usepackage[final]{microtype}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{listings}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usepackage{tkz-euclide} 
+\lstset{basicstyle = \ttfamily}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[colorlinks, allcolors = uiolink]{hyperref}
+\usepackage[noabbrev]{cleveref}
+\pretolerance = 2000
+\tolerance    = 6000
+\hbadness     = 6000
+\newcounter{probnum}[section]
+\newcounter{subprobnum}[probnum] 
+\usepackage{dirtytalk}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{varwidth}
+\usepackage{optidef}
+\definecolor{uiolink}{HTML}{0B5A9D}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=R,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=fullflexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+} 
+\usepackage{commath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newcommand{\Q}{ \qquad \hfill \blacksquare}
+\newcommand\myeq{\stackrel{\mathclap{\normalfont{uif}}}{\sim}}
+\let\oldref\ref
+\renewcommand{\ref}[1]{(\oldref{#1})}
+\newtheorem{lemma}[theorem]{Lemma}
+\setlength \epigraphwidth {\linewidth}
+\setlength \epigraphrule {0pt}
+\AtBeginDocument{\renewcommand {\epigraphflush}{center}}
+\renewcommand {\sourceflush} {center}
+\parindent 0ex
+\renewcommand{\thesection}{\roman{section}} 
+\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\T}{\top}
+\newcommand{\bl}{\left\{}
+\newcommand{\br}{\right\}}
+\newcommand{\spaze}{\vspace{4mm}\\}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Rel}{\mathbb{R}}
+\newcommand{\expdist}[2]{%
+        \normalfont{\textsc{Exp}}(#1, #2)%
+    }
+\newcommand{\expparam}{\bm \lambda}
+\newcommand{\Expparam}{\bm \Lambda}
+\newcommand{\natparam}{\bm \eta}
+\newcommand{\Natparam}{\bm H}
+\newcommand{\sufstat}{\bm u}
+
+% Main document
+\begin{document}
+\header{}
+\section*{Upoznavanje (Getting to know)}
+\emph{Dialogue 1:}\spaze
+\textbf{(A) Dzon i Andjela Braun putuju u Beograd (Jon and Andjela traveling/going to Beograd)} \spaze
+Milan: Dobar dan (Good day)\\[3pt]
+Andjela: Dobar dan (Good day) \\[3pt]
+Milan: Ja sam Milan Jovanovic(ch) (I am Milan Jovanovic) \\[3pt]
+Andjela: Ja sam Andjela Braun, a ovo je moj muz (zh), Dzon. (I am Andjela Braun, and this is my husband, Jon) \\ [3pt]
+Milan: Drago mi je. Dobro dosli u Beograd (Nice to meet yo. Welcome to Beograd) \spaze 
+\textbf{(B)} \spaze
+Dzon: Vi ste Srbin, zar ne? (You are serbian, aren`t you?) \\[3pt]
+Milan: Da, ja sam Srbin, a vi? (Yes, I am serbian, and you?) \\[3pt]
+Dzon: Mi smo Englezi. (We are english.) \spaze 
+\textbf{Personal Pronouns:}
+\begin{table}[H]
+    \begin{center}
+      \caption{Personal Pronouns}
+      \begin{tabular}{l|S|r}
+        \toprule % <-- Toprule here
+        \textbf{Singular} & \textbf{Plural} & \textbf{English}\\
+        \midrule % <-- Midrule here
+        1st \ Ja  & Mi & I, \ We\\[4pt]
+        2nd \ Ti & Vi & You(familiar), \ You(formal, polite)\\[4pt]
+        3rd \ On & Oni & He, \ They(m. or mixed gender)\\[4pt]
+        \ Ona & {One} & They(f.)\\[4pt]
+        \ Ono & {Ona} & They(n.)\\[4pt]
+        \bottomrule % <-- Bottomrule here
+      \end{tabular}
+    \end{center}
+  \end{table}
+  Personal pronouns are not used when they are the subject (nominative case), except for emphasis.\spaze 
+  \textbf{Examples:}\spaze 
+  Kako se zovete? (No personal pronoun) \\[3pt]
+  Zovem se Milan. Kako se vi zovete? (I`m called Milan. What are you called?)\\[3pt]
+  Ne razumeju engleski. Da li on govori srpski? (They don`t understand English. Does he speak Serbian?) \spaze 
+  \emph{Dialogue 2:} \spaze 
+  - Zdravo Andjela, kako si (Hello Andjela, how are you?) \spaze 
+  - Dobro hvala, a kako si ti (Good thank you, and how are you?) \spaze 
+  - I ja sam dobro, hvala (I am fine too, thank you) \spaze  
+  \spaze 
+  - Govorite li srpski? (Do you speak serbian?) \spaze 
+  - Naz(zh)alost, jos(sh) ne. Ali uc(tch)imo (ucim)! (Unfortunately, not yet. But we`re learning) \spaze 
+  - Bravo! \spaze 
+  \subsection*{Biti (I am)}
+  \begin{table}[H]
+    \begin{center}
+      \caption{Short form of Biti}
+      \begin{tabular}{l|S|r}
+        \toprule % <-- Toprule here
+        \textbf{English} & \textbf{Serbian} & \textbf{to be}\\
+        \midrule % <-- Midrule here
+        \ I  & Ja & sam\\[4pt]
+        \ You & Ti & si\\[4pt]
+        \ He/she/it & On/ona/ono & je\\[4pt]
+        \ We & Mi  & smo \\[4pt]
+        \ You & Vi  & ste \\[4pt]
+        \ They & {Oni/one/ona}  & su \\[4pt]
+        \bottomrule % <-- Bottomrule here
+      \end{tabular}
+    \end{center}
+  \end{table}
+\subsection*{Exercises (Vez(zh)be)} 
+(a) \spaze 
+1.) Ja sam Engleskinja. Moj Muz (zh) je S(sh)kotlandjanin. (I am English (female). My husband is Scottish) \spaze 
+2.) Oni su Amerikanci, a mi smo Englezi. (They are american, and we are English) \spaze 
+3.) Vesna i Neda su Hrvatice. One su studentkinje (Vesna and Neda are croatians. They are students) \spaze 
+4.) Vi ste Bosanac? (Are you (formal) Bosnian?) \spaze 
+5.) Oni su dobro. (They are good.) \spaze 
+(b) \spaze 
+1.) Mi ne govorimo srpski (We don`t speak serbian) \spaze 
+2.) Ti si Francuz. (You are french (male)) \spaze 
+3.) Vi ste studenti? (Are you students?) \spaze 
+4.) Andjela i Dzon su muz i zena. Oni su Englezi (Andjela and John are husband and wife. They are english.) \spaze 
+5.) Zovem se Milan. Ja sam iz Beograda (My name is Milan. I am from Beograd) \spaze 
+\subsection*{Biti (I am) long form}
+  \begin{table}[H]
+    \begin{center}
+      \caption{Long form of Biti}
+      \begin{tabular}{l|S|r}
+        \toprule % <-- Toprule here
+        \textbf{English} & \textbf{Serbian} & \textbf{to be}\\
+        \midrule % <-- Midrule here
+        \ I  & Ja & Jesam\\[4pt]
+        \ You & Ti & Jesi \\[4pt]
+        \ He/she/it & On/ona/ono & Jest(e)\\[4pt]
+        \ We & Mi  & jesmo \\[4pt]
+        \ You & Vi  & jeste \\[4pt]
+        \ They & {Oni/one/ona}  & jesu \\[4pt]
+        \bottomrule % <-- Bottomrule here
+      \end{tabular}
+    \end{center}
+  \end{table}
+  \subsection*{Exercise 2:} 
+(a)\spaze 
+1.) Je li Neda Srpkinja? - Jeste (Is Neda Serbian?)\spaze 
+2.) Jesu li Dado i Denis Bosanci? - Jesu (Are Dado and Denis Bosnian?) \spaze 
+3.) Jesmo li mi Srbi? -  Jesmo (Are we Serbs?) \spaze 
+4.) Je li moj muz Irac? - Jeste (Is my husband Iranian?) \spaze 
+5.) Jesi li ti Amerikanac - Jesam (Are you American?) 
+\subsection*{Biti (I am) negative form}
+  \begin{table}[H]
+    \begin{center}
+      \caption{Long form of Biti}
+      \begin{tabular}{l|S|r}
+        \toprule % <-- Toprule here
+        \textbf{English} & \textbf{Serbian} & \textbf{to be}\\
+        \midrule % <-- Midrule here
+        \ I  & Ja & Nisam\\[4pt]
+        \ You & Ti & Nisi \\[4pt]
+        \ He/she/it & On/ona/ono & Nije\\[4pt]
+        \ We & Mi  & Nismo \\[4pt]
+        \ You & Vi  & Niste \\[4pt]
+        \ They & {Oni/one/ona}  & Nisu \\[4pt]
+        \bottomrule % <-- Bottomrule here
+      \end{tabular}
+    \end{center}
+  \end{table}
+  \subsection*{Exercise 3:}
+  1.) Mi nismo studenti - (We are not students) \spaze 
+  2.) Oni nisu muz i zena - (They are not husband and wife) \spaze 
+  3.) Ti nisi Englez - (You are not English) \spaze 
+  4.) On nije moj muz - (He is not my husband) \spaze 
+  5.) Ja nisam dobro - (I am not good) \spaze  
+  \subsection*{Exercise 4:} 
+  - Zdravo, ja sam Marko. A kako se ti zoves? (Hello, I am Marko. And what is your name?) \spaze 
+  - Zdravo, ja se zovem Dzon. (Hello, my name is Dzon) \spaze 
+  - Drago mi je. (Nice to meet you) \spaze 
+  - Drago mi je. \spaze 
+  - Jesi li ti Englez, Dzon? (Are you English, John?) \spaze 
+  - Nisam. Ja sam Amerikanac. A ti Marko? (I am not. I am American. What about you Marko) \spaze 
+  - Ja sam Srbin. (I am Serbian.) 
+  \subsection*{Exercise 5:}
+  - Zdravo Vesna (Hello Vesna) \spaze 
+  - Cao, Dzon. Cao Andjela (Hello, John and Andjela) \spaze 
+  - Kako ste? (How are you?) \spaze
+  - Mi smo dobro. A ti? (We`re good, and you?) \spaze
+  - Nisam lose (Not bad) \spaze
+  \subsection*{Formation of questions:} 
+  \textbf{\textit{With interrogative words}:} \spaze 
+  Zasto ucite srpski? (*Why* are you learning serbian?) \spaze 
+  Ko ste vi? (*Who* are you?) \spaze 
+  Sta radis ovde? (*What* are you doing here?)\spaze 
+   \textbf{\textit{No interrogative word (verb then the particle *li*}:} \spaze 
+   Dolazite li cesto ovamo (*Do you* come here often?) \spaze 
+   Ceka li vasa zena (Is your wife waiting?) \spaze 
+    \textbf{\textit{No interrogative word with the conjunction da.(the particle *li* and verb can be placed anywhere}:}\spaze 
+    Da li govorite srpski? (Do you speak serbian?) \spaze 
+    Da li razumete engleski? (Do you understand english?) \spaze 
+     \textbf{\textit{Negative questions (Zar)}:}\spaze
+     Zar ti nisi Englez? (Aren`t you English?) \spaze 
+     Zar studenti ne razumeju? (Don`t the students understand?)\spaze 
+  \subsection*{Exercise 6:} 
+  \textbf{a.)} \spaze
+ 	1.) Da li Ben iz Londona? - Da, jeste (Is Ben from London? Yes, he is) \spaze 
+ 	2.) Da li je on sada u Parizu? Ne, on je u Beogradu. (Is he in Paris now? No, he is in Beograd.) \spaze 
+ 	3.) Ko ceka Bena na aerodromu? Dejan na aerodromu ceka Bena. (Who is waiting for Ben at the airport? Dejan is waiting for Ben at the airport.) \spaze 
+ 	4.) Gde odlaze Ben i Dejan? - Oni su odlaze u Zemun (odlaze u Zemun) (Where are Ben and Dejan leaving? They are leaving for Zemun.) \spaze 
+ \textbf{b.)} \spaze 
+Carinik - Dobar dan, gospodine Vilson. (Good day, mister Vilson). \spaze
+Ben - Dobar dan. (Good day) \spaze 
+Carinik - Vas pasos, molim. (Your passport, please.) \spaze 
+Ben - Izvolite (Here you go) \spaze 
+Carinik - Sve je u redu. Dobro dosli u Beograd (Everything is okay. Welcome to Beograd) \spaze 
+Ben - Hvala. (Thank you)
+\end{document}
